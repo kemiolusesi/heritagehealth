@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heritage Health Library | Consult the Ancestral Survival System</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 5v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="brand-divider"></div>
+    <span class="brand-name">Heritage Health</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#entry">The Archive</a></li>
+    <li><a href="#consultation">Consultation</a></li>
+    <li><a href="#library">Library</a></li>
+    <li><a href="#sovereignty">Ledger</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- SCREEN ONE: THE ENTRY -->
+<section class="screen-entry" id="entry">
+  <div class="hero-video-bg"></div>
+  <div class="elder-portrait"></div>
+  
+  <div class="sanctuary-card">
+    <h1 class="sanctuary-headline">Consult the Ancestral Survival System</h1>
+    <p class="sanctuary-sub">Bridging 5,000 years of Sahelian medicinal wisdom with modern clinical data.</p>
+    <a href="#consultation" class="invoke-btn">Invoke the Archive</a>
+  </div>
+</section>
+
+<!-- SCREEN TWO: CONSULTATION WITH TOGGLE -->
+<section class="screen-consultation" id="consultation">
+  <div class="consultation-container">
+    <div class="consultation-header">
+      <h2 class="consultation-title">The Consultation</h2>
+      <p class="consultation-subtitle">Interactive dialogue with ancestral knowledge</p>
+    </div>
+    
+    <!-- Toggle Switch -->
+    <div class="view-toggle-container">
+      <span class="toggle-label active" id="tradLabel">Traditional View</span>
+      <div class="toggle-switch" id="viewToggle">
+        <div class="toggle-slider"></div>
+        <!-- <span class="toggle-text traditional">Traditional</span>
+        <span class="toggle-text clinical">Clinical Lab</span> -->
+      </div>
+      <span class="toggle-label" id="clinLabel">Clinical Laboratory</span>
+    </div>
+    
+    <div class="consultation-grid">
+      <!-- Digital Twin -->
+<!-- Digital Twin -->
+      <div class="digital-twin">
+        <div class="twin-wrapper">
+          <div class="pulse-glow"></div>
+          <div class="twin-portrait">
+            <img src="img.png" alt="Digital Twin - Traditional Healer" class="twin-image" loading="eager">
+          </div>
+        </div>
+        <p class="twin-label">Digital Twin Interface</p>
+      </div>
+      
+      <!-- Traditional Chat Interface -->
+      <div class="chat-interface" id="traditionalView">
+        <div class="chat-header">
+          <h3 class="chat-title">Dialogue with Elder</h3>
+          <p class="chat-subtitle">Oral history retrieval system</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+          <div class="user-message">
+            How was Zobo (Hibiscus) used for heart health in the 1950s?
+          </div>
+          
+          <div class="elder-response">
+            <p>In my grandmother's time, we prepared Zobo as a drink and as medicine. For the heart, we would steep the dried calyces overnight with ginger and a touch of honey. This was taken warm in the morning, especially for those with high blood pressure...</p>
+            
+            <div class="audio-waveform" id="waveform">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
+            
+            <div class="source-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Kano State, Hausa Tradition · Dala District</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="input-area">
+          <input type="text" class="question-input" id="questionInput" placeholder="Ask the elder about traditional remedies...">
+          <button class="send-btn" id="sendBtn">Send</button>
+        </div>
+      </div>
+      
+      <!-- Clinical Lab View -->
+      <div class="clinical-lab-view" id="clinicalView">
+        <div class="scanning-beam"></div>
+        <div class="scanning-grid"></div>
+        
+        <div class="clinical-header">
+          <h3 class="clinical-title">Clinical Analysis Laboratory</h3>
+          <p class="clinical-subtitle">Scientific validation & molecular profiling</p>
+        </div>
+        
+        <div class="clinical-content">
+          <div class="scientific-detail">
+            <div class="detail-label">Active Compound Analysis</div>
+            <div class="detail-text">Hibiscus sabdariffa calyces contain anthocyanins, flavonoids, and organic acids with documented cardiovascular benefits</div>
+            <div class="compound-tags">
+              <span class="compound-tag">Anthocyanins</span>
+              <span class="compound-tag">Quercetin</span>
+              <span class="compound-tag">Vitamin C</span>
+              <span class="compound-tag">Polyphenols</span>
+            </div>
+          </div>
+          
+          <div class="scientific-detail">
+            <div class="detail-label">Clinical Efficacy Score</div>
+            <div class="detail-value">87.3%</div>
+            <div class="detail-text">Evidence strength based on 42 peer-reviewed studies showing antihypertensive and cardioprotective effects</div>
+          </div>
+          
+          <div class="scientific-detail">
+            <div class="detail-label">Bioavailability Index</div>
+            <div class="detail-text">Traditional preparation method (overnight steeping) preserves 94% of active anthocyanins compared to 67% in boiling methods</div>
+          </div>
+          
+          <div class="scientific-detail">
+            <div class="detail-label">Safety Profile</div>
+            <div class="detail-text">Low adverse event rate (0.3%). Contraindicated with ACE inhibitors. Safe for long-term consumption at traditional dosages.</div>
+          </div>
+          
+          <div class="scientific-detail">
+            <div class="detail-label">Research Citations</div>
+            <div class="detail-text">PubMed ID: 28456123 · WHO Traditional Medicine Database · African Journal of Clinical Pharmacology Vol. 34</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN THREE: ARCHIVED LIBRARY -->
+<section class="screen-library" id="library">
+  <div class="library-container">
+    <div class="library-header">
+      <h2 class="library-title">The Archived Library</h2>
+      <p class="library-subtitle">Searchable repository of traditional Sahelian health knowledge — each entry linked to community source, clinical evidence, and sovereignty metadata.</p>
+    </div>
+    
+    <div class="library-layout">
+      <div class="library-sidebar">
+        <input class="search-input" type="text" placeholder="Search practices, plants, conditions..." id="searchInput">
+        
+        <div class="filter-group">
+          <div class="filter-label">Tradition</div>
+          <div class="filter-pills">
+            <button class="pill active" onclick="setFilter('all')">All</button>
+            <button class="pill" onclick="setFilter('hausa')">Hausa</button>
+            <button class="pill" onclick="setFilter('yoruba')">Yoruba</button>
+            <button class="pill" onclick="setFilter('sahelian')">Sahelian</button>
+            <button class="pill" onclick="setFilter('igbo')">Igbo</button>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <div class="filter-label">Status</div>
+          <div class="filter-pills">
+            <button class="pill active" onclick="setStatusFilter('all')">All</button>
+            <button class="pill" onclick="setStatusFilter('validated')">Validated</button>
+            <button class="pill" onclick="setStatusFilter('review')">In Review</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="practice-list" id="practiceList">
+        <div class="practice-item" data-tradition="hausa" data-status="validated">
+          <div class="pi-top">
+            <div>
+              <div class="pi-name">Moringa (Zogale) Nutritional Supplement</div>
+              <div class="pi-meta">Hausa tradition · Nutritional · Dala District, Kano</div>
+              <div class="pi-tags">
+                <span class="ptag ptag-g">Maternal Health</span>
+                <span class="ptag ptag-g">Malnutrition</span>
+              </div>
+            </div>
+            <span class="badge-v badge-validated">Validated</span>
+          </div>
+          <div class="confidence-row">
+            <div class="conf-track"><div class="conf-fill" style="width:94%"></div></div>
+            <span class="conf-num">94% confidence</span>
+          </div>
+          <div class="detail-expand">
+            <p class="detail-text">Moringa oleifera leaf powder used for maternal and child malnutrition in Northern Nigeria for centuries. WHO-recognised micronutrient source with exceptional vitamin C, iron, and protein content.</p>
+            <div class="detail-stats">
+              <div class="ds-item"><div class="ds-label">Community Sources</div><div class="ds-value">89 accounts</div></div>
+              <div class="ds-item"><div class="ds-label">Clinical Studies</div><div class="ds-value">64 matched</div></div>
+              <div class="ds-item"><div class="ds-label">Sovereignty</div><div class="ds-value">Dala District Trust</div></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="practice-item" data-tradition="sahelian" data-status="validated">
+          <div class="pi-top">
+            <div>
+              <div class="pi-name">Baobab Fruit Pulp Therapy</div>
+              <div class="pi-meta">Sahelian tradition · Nutritional · Pan-Sahel</div>
+              <div class="pi-tags">
+                <span class="ptag ptag-g">Immune Support</span>
+                <span class="ptag ptag-g">Micronutrient Density</span>
+              </div>
+            </div>
+            <span class="badge-v badge-validated">Validated</span>
+          </div>
+          <div class="confidence-row">
+            <div class="conf-track"><div class="conf-fill" style="width:91%"></div></div>
+            <span class="conf-num">91% confidence</span>
+          </div>
+          <div class="detail-expand">
+            <p class="detail-text">Adansonia digitata pulp contains among the highest documented vitamin C concentrations of any fruit. Traditional use across the Sahel for child nutritional support and immune function.</p>
+            <div class="detail-stats">
+              <div class="ds-item"><div class="ds-label">Community Sources</div><div class="ds-value">41 accounts</div></div>
+              <div class="ds-item"><div class="ds-label">Clinical Studies</div><div class="ds-value">29 matched</div></div>
+              <div class="ds-item"><div class="ds-label">Adverse Events</div><div class="ds-value">None documented</div></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="practice-item" data-tradition="yoruba" data-status="review">
+          <div class="pi-top">
+            <div>
+              <div class="pi-name">Shea Butter Wound Dressing</div>
+              <div class="pi-meta">Yoruba tradition · Dermatological · Southwest Nigeria</div>
+              <div class="pi-tags">
+                <span class="ptag ptag-r">Wound Care</span>
+                <span class="ptag ptag-o">Anti-inflammatory</span>
+              </div>
+            </div>
+            <span class="badge-v badge-review">In Review</span>
+          </div>
+          <div class="confidence-row">
+            <div class="conf-track"><div class="conf-fill" style="width:54%"></div></div>
+            <span class="conf-num">54% confidence</span>
+          </div>
+          <div class="detail-expand">
+            <p class="detail-text">Vitellaria paradoxa fat applied topically as wound sealant. High community prevalence across Yoruba communities. Clinical literature partially supports anti-inflammatory properties.</p>
+            <div class="detail-stats">
+              <div class="ds-item"><div class="ds-label">Community Sources</div><div class="ds-value">67 accounts</div></div>
+              <div class="ds-item"><div class="ds-label">Clinical Studies</div><div class="ds-value">7 matched</div></div>
+              <div class="ds-item"><div class="ds-label">Trial Status</div><div class="ds-value">Phase II - Lagos</div></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="practice-item" data-tradition="igbo" data-status="validated">
+          <div class="pi-top">
+            <div>
+              <div class="pi-name">Bitter Leaf (Onugbu) Liver Tonic</div>
+              <div class="pi-meta">Igbo tradition · Hepatoprotective · Southeast Nigeria</div>
+              <div class="pi-tags">
+                <span class="ptag ptag-g">Liver Support</span>
+                <span class="ptag ptag-o">Digestive Health</span>
+              </div>
+            </div>
+            <span class="badge-v badge-validated">Validated</span>
+          </div>
+          <div class="confidence-row">
+            <div class="conf-track"><div class="conf-fill" style="width:69%"></div></div>
+            <span class="conf-num">69% confidence</span>
+          </div>
+          <div class="detail-expand">
+            <p class="detail-text">Vernonia amygdalina used as hepatoprotective agent and digestive bitter. Active alkaloids demonstrate measurable liver enzyme modulation in controlled studies.</p>
+            <div class="detail-stats">
+              <div class="ds-item"><div class="ds-label">Community Sources</div><div class="ds-value">38 accounts</div></div>
+              <div class="ds-item"><div class="ds-label">Clinical Studies</div><div class="ds-value">11 matched</div></div>
+              <div class="ds-item"><div class="ds-label">Adverse Events</div><div class="ds-value">Low risk</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN FOUR: SOVEREIGN LEDGER -->
+<section class="screen-sovereignty" id="sovereignty">
+  <div class="sovereignty-container">
+    <div class="sovereignty-header">
+      <h2 class="sovereignty-title">The Sovereign Ledger</h2>
+      <p class="sovereignty-subtitle">Data ownership · Community royalties · Encrypted provenance</p>
+    </div>
+    
+    <!-- Animated Seal -->
+    <div class="ledger-seal-container">
+      <div class="ancestral-pattern"></div>
+      <div class="encryption-overlay"></div>
+      <div class="seal-text">Sovereignty Secured · Dala District, Kano</div>
+    </div>
+    
+    <!-- Three-Column Story -->
+    <div class="ledger-story-grid">
+      <div class="ledger-card">
+        <span class="ledger-icon">📍</span>
+        <h4>Origin Verified</h4>
+        <p>Recorded with Elder Amina Yusuf<br>12 March 2025 · Dala District, Kano</p>
+        <div class="gps-coords">12.0098° N, 8.5175° E</div>
+      </div>
+      
+      <div class="ledger-card highlight">
+        <span class="ledger-icon">💰</span>
+        <h4>Royalties in Motion</h4>
+        <div class="royalty-counter">₦<span id="royaltyAmount">4,287,653.91</span></div>
+        <p>Directed to Dala District Educational Trust</p>
+        <div class="impact-metrics">
+          <span>127 scholarships funded</span>
+          <span>3 community clinics built</span>
+          <span>1 seed bank restored</span>
+        </div>
+      </div>
+      
+      <div class="ledger-card">
+        <span class="ledger-icon">🔐</span>
+        <h4>Encrypted Forever</h4>
+        <p>Hash: <span class="hash">0x7f3a9...c2e1</span></p>
+        <p>Immutable · Community-governed · AI-audited</p>
+        <div class="sovereignty-badge">
+          <span class="secure-dot"></span>
+          Next review: 2030
+        </div>
+      </div>
+    </div>
+    
+    <!-- Consent Timeline -->
+    <div class="consent-timeline">
+      <h3 class="timeline-label">Community Consent Journey</h3>
+      <div class="timeline-steps">
+        <div class="step active">Oral Consent Recorded</div>
+        <div class="step active">Written Agreement Signed</div>
+        <div class="step active">Sovereignty Metadata Embedded</div>
+        <div class="step active">Ongoing Royalty Distribution</div>
+        <div class="step">7-Generation Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+  <div class="cta-content">
+    <h2 class="cta-title">Let's build this together</h2>
+    <p class="cta-text"><i>“The bigger picture is to restore lost languages, to capture our actual languages, culture, heritages, so the world understands who we are, where we’re coming from, without misrepresenting it”</i> <br/>- Malik Afegbua</p>
+    <p class="cta-text">The Heritage Health Library is the clinical-grade survival layer for the African story. Ready for deployment.</p>
+    <a href="mailto:thekemiolusesi@gmail.com" class="cta-button">Start a conversation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-architect">Architected by <a href="https://linkedin/in/kemi-olusesi">Feyikemi Olusesi</a> · Software Developer & Clinical Nutritionist</div>
+    <div class="secure-badge">
+      <span class="secure-dot"></span>
+      Encrypted Ancestral Data
+    </div>
+  </div>
+  <div class="footer-center">
+    <div>Powered by the Northern Node Pilot · Kano, Nigeria</div>
+    <div style="margin-top: 0.5rem; font-size: 11px; color: var(--text-muted);">Heritage Health Library © 2026</div>
+  </div>
+  <div class="footer-right">
+    <a href="#sovereignty">Data Sovereignty Protocols</a>
+    <a href="#consultation">Ethical AI Framework</a>
+  </div>
+</footer>
+</body>
+</html>
