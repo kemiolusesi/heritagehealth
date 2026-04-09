@@ -97,6 +97,9 @@ nav {
   width: 16px;
   height: 16px;
   stroke: var(--obsidian);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
 .brand-divider {
@@ -132,6 +135,157 @@ nav {
 
 .nav-links a:hover {
   color: var(--gold-light);
+}
+
+/* MOBILE/TABLET HAMBURGER */
+@media (max-width: 1024px) {
+  .nav-links,
+  .nav-cta {
+    display: none !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+    order: 3;
+    z-index: 1001;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: var(--gold-light);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  nav {
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* ===== DESKTOP NAV (≥1025px) ===== */
+@media (min-width: 1025px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  .nav-links {
+    display: flex !important;
+  }
+  .nav-cta {
+    display: inline-block !important;
+  }
+}
+
+/* ===== MOBILE MENU OVERLAY ===== */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10,10,15,0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+  border-color: var(--gold-light);
+}
+
+.mobile-menu-overlay a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-gold);
+  transition: all 0.3s ease;
+  width: 80%;
+  text-align: center;
+}
+
+.mobile-menu-overlay a:hover {
+  color: var(--gold-light);
+  border-color: var(--gold);
+  transform: translateX(10px);
+}
+
+/* iPad-specific menu sizing */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-menu-overlay a {
+    font-size: 1.8rem;
+    padding: 1.25rem 2.5rem;
+  }
+}
+
+/* Phone-specific menu sizing */
+@media (max-width: 767px) {
+  .mobile-menu-overlay a {
+    font-size: 1.3rem;
+    padding: 0.875rem 1.5rem;
+  }
+  .mobile-menu-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* TOGGLE SWITCH - Traditional vs Clinical Lab */
@@ -350,11 +504,74 @@ nav {
   font-weight: 300;
 }
 
+/* ===== CONSULTATION LAYOUT - ALL SCREENS ===== */
 .consultation-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+/* Tablet (768px-1024px): Keep side-by-side but tighter */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .consultation-grid {
+    gap: 2rem;
+  }
+  .digital-twin {
+    max-width: 320px;
+  }
+}
+
+/* Mobile (≤767px): Stack vertically */
+@media (max-width: 767px) {
+  .consultation-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .digital-twin {
+    max-width: 260px;
+    margin: 0 auto 1rem;
+    order: 1;
+  }
+  
+  .twin-portrait {
+    aspect-ratio: 1/1;
+    max-width: 240px;
+  }
+  
+  .chat-interface,
+  .clinical-lab-view {
+    order: 2;
+    min-height: calc(100vh - 340px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-messages,
+  .clinical-content {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+  }
+  
+  .view-toggle-container {
+    margin: 1rem 0;
+    position: sticky;
+    top: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-radius: 12px;
+  }
+  
+  .input-area {
+    position: sticky;
+    bottom: 0;
+    background: var(--glass-bg);
+    padding-top: 1rem;
+    z-index: 10;
+  }
 }
 
 /* Digital Twin */
@@ -1469,5 +1686,49 @@ footer {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+}
+/* ===== GLOBAL RESPONSIVE SAFEGUARDS ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scroll on sections */
+@media (max-width: 768px) {
+  section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .sanctuary-card,
+  .chat-interface,
+  .clinical-lab-view,
+  .sovereignty-dashboard {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Touch target sizing */
+@media (max-width: 768px) {
+  .toggle-switch,
+  .pill,
+  .btn-primary,
+  .btn-secondary,
+  .send-btn,
+  .invoke-btn {
+    min-height: 44px;
   }
 }
